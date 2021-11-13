@@ -5,7 +5,7 @@
              var hashInfo = window.location.toString();
         hashInfo = hashInfo.substring(hashInfo.indexOf("q=") + 2,hashInfo.length);
         if(hashInfo.indexOf("&") > 0){
-            hashInfo = hashInfo.substring(0,hashInfo.indexOf("&"));   
+            hashInfo = hashInfo.substring(0,hashInfo.indexOf("&"));
         }
 
         var arr = hashInfo.split("+");
@@ -15,10 +15,10 @@
 
         var ofdom = document.getElementById("dbFrame");
         if(ofdom != null){
-            ofdom.remove();   
+            ofdom.remove();
         }
-        
-        var html= '<iframe id="dbFrame" style="position: fixed;border:0px; top: 0px; right: 0px; border-left:1px blue solid; width: 66.66%; height: 100%; z-index: 10000000;" src="'+targetUrl+'"></iframe>';
+
+        var html= '<iframe id="dbFrame" style="position: fixed;border:0px; top: 0px; right: 0px; border-left:1px blue solid; width: 50.00%; height: 100%; z-index: 10000000;" src="'+targetUrl+'"></iframe>';
         var body = document.body;
 
         var div = document.createElement("div");
@@ -30,28 +30,28 @@
 
         document.getElementById("searchform").style.width = "50%";
         document.getElementById("center_col").style.marginLeft = "20px";
-        document.getElementById("rhs").style.marginLeft = "670px";   
-            
+        document.getElementById("rhs").style.marginLeft = "670px";
+
         }catch(e){
 console.log(e);
         }
     }
-    
+
     openBD();
-    
-    
-  
-    
-   
+
+
+
+
+
 
 
 function locationHashChanged() {
-    
+
         try{
              var hashInfo = window.location.toString();
         hashInfo = hashInfo.substring(hashInfo.indexOf("q=") + 2,hashInfo.length);
         if(hashInfo.indexOf("&") > 0){
-            hashInfo = hashInfo.substring(0,hashInfo.indexOf("&"));   
+            hashInfo = hashInfo.substring(0,hashInfo.indexOf("&"));
         }
 
         var arr = hashInfo.split("+");
@@ -61,9 +61,9 @@ function locationHashChanged() {
 
         var ofdom = document.getElementById("dbFrame");
         if(ofdom != null){
-            ofdom.remove();   
+            ofdom.remove();
         }
-        
+
         var html= '<iframe id="dbFrame" style="position: fixed;border:0px; top: 0px; right: 0px; border-left:1px blue solid; width: 50%; height: 100%; z-index: 10000000;" src="'+targetUrl+'"></iframe>';
         var body = document.body;
 
@@ -75,13 +75,13 @@ function locationHashChanged() {
 
         document.getElementById("searchform").style.width = "50%";
         document.getElementById("center_col").style.marginLeft = "20px";
-        document.getElementById("rhs").style.marginLeft = "670px";   
-            
+        document.getElementById("rhs").style.marginLeft = "670px";
+
         }catch(e){
 console.log(e);
         }
-    
-    
+
+
 }
 
 window.onhashchange = locationHashChanged;
