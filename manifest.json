@@ -1,0 +1,20 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version":2,
+	"name":"multi-search",
+	"version":"0.0.1",
+	"description":"multi-search",
+	"icons":{
+		"16":"img/logo.png",
+		"48":"img/logo.png",
+		"128":"img/logo.png"
+	},
+	"content_scripts":[{
+			"matches": ["https://www.google.com/*","https://www.google.com.hk/*"],
+			"js": ["js/content-script.js"]
+	},{
+			"matches": ["https://www.baidu.com/*"],
+			"js": ["js/content-script-bd.js"]
+	}]
+}
